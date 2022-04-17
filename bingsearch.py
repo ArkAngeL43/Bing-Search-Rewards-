@@ -1,3 +1,9 @@
+import os
+import time
+import webbrowser
+from random import randint
+# imports always go first, best for organization
+
 def logo():
     print(bcolors.RED + bcolors.BOLD)
     print("""
@@ -12,12 +18,6 @@ def logo():
 
     """.format(V=VERSION))
     print(bcolors.ENDC)
-
-
-import os
-import time
-import webbrowser
-from random import randint
 
 file = open("/home/Your Username/Bing-Search/words.txt", "r")
 words = []
@@ -34,12 +34,12 @@ for i in range(1, 31):
     # Open URL in new browser window
     webbrowser.open_new_tab(url) # opens in default browser
 
-    time.sleep(30)
+    # time . sleep for 30 seconds? 10 at most 
 
     if i % 4 == 0:
-        time.sleep(30)
+        time.sleep(30) # Why? 
         os.system("pkill chromium-browse")
-        time.sleep(10)
+        time.sleep(10) # WHYYYYYYYYYYY
 
 os.system("pkill chromium-browse")
 
